@@ -21,15 +21,14 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          cache: 'gradle'
-          cache-dependency-path: aquadesk-native/build.gradle.kts
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-        working-directory: aquadesk-native
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
 
       - name: Build Debug APK with Gradle
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
         working-directory: aquadesk-native
 
       - name: Upload APK Artifact
