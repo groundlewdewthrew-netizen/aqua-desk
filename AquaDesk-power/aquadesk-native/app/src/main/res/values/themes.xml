@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.AquaDesk" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#0B3C5D</item>
+        <item name="android:navigationBarColor">#0B3C5D</item>
+    </style>
+</resources>
