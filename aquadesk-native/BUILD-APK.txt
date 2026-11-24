@@ -1,0 +1,24 @@
+AquaDesk APK build
+
+This ZIP contains an Android Studio/Gradle project and a GitHub Actions workflow.
+The workflow builds a debug APK automatically when you push the project to GitHub.
+
+Steps:
+1. Sign in to https://github.com/ and create a new repository (Public or Private).
+2. Extract this ZIP on your computer.
+3. Open the repository page, choose Add file > Upload files, and upload the CONTENTS
+   of the aquadesk-native folder (not the outer folder itself). Commit the upload.
+4. Open the repository's Actions tab. Select "Build APK" if prompted, then run the workflow.
+   A push should also start the workflow automatically.
+5. When the run finishes successfully, open it and download the
+   "AquaDesk-debug-apk" artifact. Extract it; app-debug.apk is the installable APK.
+6. Transfer app-debug.apk to your Android phone, open it, and allow installation
+   from that source if Android asks.
+
+Notes:
+- This is a debug-signed APK for testing/personal installation, not a Play Store release.
+- The Android source has not yet been compiled/tested on a device. The build may reveal
+  Kotlin/Android errors that need fixing.
+- If you already have an installed AquaDesk signed with a different key, Android may
+  require you to uninstall it before installing this debug APK. Back up app data first.
+- Do not upload signing keystores, passwords, or other private credentials to GitHub.
